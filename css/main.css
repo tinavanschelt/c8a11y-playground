@@ -11,6 +11,7 @@
 
 :root {
   --block-background-color: lightgray;
+  --block-highlight-color: rgb(0 150 136 / 42%);
 }
 
 html {
@@ -98,7 +99,7 @@ textarea {
                        "main"
                        "footer";
   margin: 1rem;
-  max-width: 1200px;
+  max-width: 75em;
 }
 
 .content-block {
@@ -111,14 +112,19 @@ textarea {
   padding: 1rem;
 }
 
+.content-block:hover {
+  background-color: var(--block-highlight-color);
+}
+
+
 nav {
   grid-area: nav;
-  height: 40px;
+  height: 2em;
 }
 
 header {
   grid-area: header;
-  height: 200px;
+  height: 12.5em;
 }
 
 main {
@@ -136,7 +142,7 @@ section.articles {
 }
 
 article {
-  height: 250px;
+  height: 16.25em;
 }
 
 article:not(:last-child) {
@@ -145,11 +151,12 @@ article:not(:last-child) {
 
 aside {
   grid-area: sidebar;
+  min-height: 12.5em;
 }
 
 footer {
   grid-area: footer;
-  height: 40px;
+  height: 2em;
 }
 
 @media only screen and (min-width: 40em) {
