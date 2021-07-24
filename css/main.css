@@ -8,7 +8,11 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-   
+
+:root {
+  --block-background-color: gray;
+}
+
 html {
   color: #222;
   font-size: 1em;
@@ -85,19 +89,39 @@ textarea {
    Custom styles
    ========================================================================== */
 
+.layout-wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "nav"
+                       "header"
+                       "main"
+                       "footer";
+  margin: 1rem auto;
+  max-width: 1200px;
+}
+
+.content-block {
+  background-color: var(--block-background-color);
+  padding: 1rem;
+}
+
 nav {
+  grid-area: nav;
 }
 
 header {
+  grid-area: header;
 }
 
 main {
+  grid-area: main;
 }
 
 article {
 }
 
 footer {
+  grid-area: footer;
 }
 
 /* ==========================================================================
