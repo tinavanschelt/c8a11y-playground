@@ -97,7 +97,7 @@ textarea {
                        "header"
                        "main"
                        "footer";
-  margin: 1rem auto;
+  margin: 1rem;
   max-width: 1200px;
 }
 
@@ -125,7 +125,8 @@ main {
   border: 2px solid black;
   display: grid;
   gap: 1rem;
-  grid-template-areas: "articles articles sidebar";
+  grid-template-areas: "articles"
+                       "sidebar";
   grid-area: main;
   padding: 1rem;
 }
@@ -149,6 +150,18 @@ aside {
 footer {
   grid-area: footer;
   height: 40px;
+}
+
+@media only screen and (min-width: 40em) {
+  main {
+    grid-template-areas: "articles articles sidebar";
+  }
+}
+
+@media only screen and (min-width: 77em) {
+  .layout-wrapper {
+    margin: 1rem auto;
+  }
 }
 
 /* ==========================================================================
