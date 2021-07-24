@@ -107,21 +107,42 @@ textarea {
 
 nav {
   grid-area: nav;
+  height: 40px;
 }
 
 header {
   grid-area: header;
+  height: 200px;
 }
 
 main {
+  border: 1px solid black;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "articles articles sidebar";
   grid-area: main;
+  padding: 1rem;
+}
+
+section.articles {
+  grid-area: articles;
 }
 
 article {
+  height: 250px;
+}
+
+article:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+aside {
+  grid-area: sidebar;
 }
 
 footer {
   grid-area: footer;
+  height: 40px;
 }
 
 /* ==========================================================================
